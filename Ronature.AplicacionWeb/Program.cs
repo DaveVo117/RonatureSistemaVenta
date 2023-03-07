@@ -1,3 +1,5 @@
+using Ronature.AplicacionWeb.Utilidades.Automapper; //se importa despues de configurar el perfil de mapeo
+
 using Ronature.IOC;
 
 
@@ -8,7 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 //Agregar builder--------------------------------------------------------
 builder.Services.InyectarDependencia(builder.Configuration);
-
+//Agregar configuracion de mapeo (perfil)
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 
 var app = builder.Build();

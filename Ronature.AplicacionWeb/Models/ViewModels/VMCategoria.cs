@@ -12,7 +12,7 @@ namespace Ronature.AplicacionWeb.Models.ViewModels
 
         public int IdCategoria { get; set; }
         public string? TxtDescripcion { get; set; }
-        public bool? SnActivo { get; set; }
+        public int? SnActivo { get; set; }
         //public DateTime? FechaRegistro { get; set; }
 
         //public virtual ICollection<Producto> Productos { get; set; }

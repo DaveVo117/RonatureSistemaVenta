@@ -21,7 +21,7 @@ namespace Ronature.AplicacionWeb.Models.ViewModels
         //public DateTime? FechaRegistro { get; set; }
 
         //public virtual Menu? IdMenuPadreNavigation { get; set; }
-        public virtual ICollection<VMMenu> InverseIdMenuPadreNavigation { get; set; }
+        public virtual ICollection<VMMenu> SubMenus { get; set; }
         //public virtual ICollection<RolMenu> RolMenus { get; set; }
 
     }
