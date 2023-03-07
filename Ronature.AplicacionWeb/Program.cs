@@ -1,5 +1,4 @@
 using Ronature.AplicacionWeb.Utilidades.Automapper; //se importa despues de configurar el perfil de mapeo
-
 using Ronature.IOC;
 
 
