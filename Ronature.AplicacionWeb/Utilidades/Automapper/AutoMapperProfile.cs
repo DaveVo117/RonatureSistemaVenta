@@ -37,7 +37,7 @@ namespace Ronature.AplicacionWeb.Utilidades.Automapper
                 )
 
                 .ForMember(destino =>
-                destino.IdRolNavigation.TxtDescripcion,
+                destino.IdRolNavigation,
                 opt => opt.Ignore()
                 );
 
@@ -104,7 +104,7 @@ namespace Ronature.AplicacionWeb.Utilidades.Automapper
                 )
 
                 .ForMember(destino =>
-                destino.IdCategoriaNavigation.TxtDescripcion,
+                destino.IdCategoriaNavigation,
                 opt => opt.Ignore()
                 )
 

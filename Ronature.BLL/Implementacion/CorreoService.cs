@@ -46,8 +46,9 @@ namespace Ronature.BLL.Implementacion
 
                 var clienteServidor = new SmtpClient()
                 {
-                    Host= Config["host"],
-                    Port= int.Parse(Config["puerto"]),
+                    Host = Config ["host"],
+                    Port = int.Parse(Config ["puerto"]),
+                    Credentials = credenciales,
                     DeliveryMethod=SmtpDeliveryMethod.Network,
                     UseDefaultCredentials= false,
                     EnableSsl = true

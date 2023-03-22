@@ -41,6 +41,7 @@ namespace Ronature.AplicacionWeb.Controllers
             return StatusCode(StatusCodes.Status200OK, vmListaRoles);
         }
 
+
         [HttpGet]
         public async Task<IActionResult> Lista() //lista de usuarios
         {
@@ -91,7 +92,6 @@ namespace Ronature.AplicacionWeb.Controllers
         }
 
 
-
         [HttpPut]
         public async Task<IActionResult> Editar([FromForm] IFormFile foto, [FromForm] string modelo)
         {
@@ -131,7 +131,22 @@ namespace Ronature.AplicacionWeb.Controllers
         }
 
 
+        [HttpDelete]
+        public async Task<IActionResult>Eliminar(int IdUsuario)
+        {
+             GenericResponse<string> genericResponse = new GenericResponse<string>();
+            try
+            {
+                genericResponse.Estado =await _usuarioService.Eliminar(IdUsuario);
+            }
+            catch (Exception ex)
+            {
+                genericResponse.Estado = false;
+                genericResponse.Mensaje=ex.Message;
+            }
 
+            return StatusCode(StatusCodes.Status200OK, genericResponse);
+        }
 
 
 
