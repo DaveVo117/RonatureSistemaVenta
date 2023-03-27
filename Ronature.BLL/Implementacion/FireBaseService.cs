@@ -23,6 +23,8 @@ namespace Ronature.BLL.Implementacion
       _repositorio = repositorio;
     }
 
+
+//METODOS
     public async Task<string> SubirStorage(Stream StreamArchivo, string CarpetaDestino, string NombreArchivo)
     {
       string urlImagen = "";
@@ -39,14 +41,14 @@ namespace Ronature.BLL.Implementacion
         var cancellation = new CancellationTokenSource();
 
         var task = new FirebaseStorage(
-          Config["rura"],
+          Config["ruta"],
           new FirebaseStorageOptions{
               AuthTokenAsyncFactory =()=> Task.FromResult(a.FirebaseToken),
               ThrowOnCancel=true
             }
           )
           .Child(Config[CarpetaDestino])
-          .Child(Config[NombreArchivo])
+          .Child(NombreArchivo)
           .PutAsync(StreamArchivo,cancellation.Token);
 
         urlImagen = await task;

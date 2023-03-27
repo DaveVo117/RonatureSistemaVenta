@@ -9945,13 +9945,15 @@ a:focus {
   background-size: cover;
 } */
 
+
+/*COLORES PRIMARIOS*/
 .bg-gradient-primary {
-    background-color: darkgrey !important;
+    background-color: goldenrod !important;
     background-size: cover;
 }
 
 .bg-second-primary {
-    background-color: darkgrey !important;
+    background-color: goldenrod !important;
 }
 
 
@@ -9968,7 +9970,7 @@ a:focus {
 }
 
 .bg-gradient-info {
-    background-color: darkgrey;
+    background-color: goldenrod;
     background-size: cover;
 }
 
