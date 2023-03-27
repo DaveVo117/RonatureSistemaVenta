@@ -128,6 +128,7 @@ namespace Ronature.BLL.Implementacion
             usuario_editar.TxtCorreo= entidad.TxtCorreo;
             usuario_editar.TxtTelefono= entidad.TxtTelefono;
             usuario_editar.IdRol= entidad.IdRol;
+            usuario_editar.SnActivo= entidad.SnActivo;
 
             if (usuario_editar.TxtNombreFoto == "")
               usuario_editar.TxtNombreFoto = nombreFoto;

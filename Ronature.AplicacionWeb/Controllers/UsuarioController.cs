@@ -113,7 +113,7 @@ namespace Ronature.AplicacionWeb.Controllers
                     fotoStream = foto.OpenReadStream();
                 }
              
-                Usuario usuario_editado = await _usuarioService.Crear(_mapper.Map<Usuario>(vmUsuario), fotoStream, nombreFoto);//el primer parámetro lo convertimos el tipo vmUsuario al tipo Usuario
+                Usuario usuario_editado = await _usuarioService.Editar(_mapper.Map<Usuario>(vmUsuario), fotoStream, nombreFoto);//el primer parámetro lo convertimos el tipo vmUsuario al tipo Usuario
 
                 vmUsuario = _mapper.Map<VMUsuario>(usuario_editado);
 
