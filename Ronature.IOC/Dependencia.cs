@@ -39,8 +39,10 @@ namespace Ronature.IOC
             Services.AddScoped<IUtilidadesService, UtilidadesService>();
             //Servicio de Roles
             Services.AddScoped<IRolService, RolService>();
-            //Servicio de registro y modificación de usuario
+            //Servicio de registro y modificación de Usuario
             Services.AddScoped<IUsuarioService, UsuarioService>();
+            //Servicio de registro y modificación de Neogicio
+            Services.AddScoped<INegocioService, NegocioService>();
 
         }
     }

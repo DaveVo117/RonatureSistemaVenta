@@ -179,7 +179,7 @@ namespace Ronature.DAL.DBContext
                     .HasColumnName("Txt_Correo");
 
                 entity.Property(e => e.TxtDireccion)
-                    .HasMaxLength(50)
+                    .HasMaxLength(500)
                     .IsUnicode(false)
                     .HasColumnName("Txt_Direccion");
 
