@@ -13,8 +13,8 @@ namespace Ronature.DAL.Interfaces
         //Métodos asíncronos, devuelven unaEntidad:Entidad- método- esFuncion<respuesta> conocida como filtro.
         Task<TEntity> Obtener(Expression<Func<TEntity, bool>> filtro);
         Task<TEntity> Crear(TEntity entidad);
-        Task<bool> Editar(TEntity editar);
-        Task<bool> Eliminar(TEntity editar);
+        Task<bool> Editar(TEntity entidad);
+        Task<bool> Eliminar(TEntity entidad);
         Task<IQueryable<TEntity>> Consultar(Expression<Func<TEntity, bool>> filtro=null);
     }
 }

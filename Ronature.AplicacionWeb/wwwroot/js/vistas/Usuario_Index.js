@@ -40,7 +40,7 @@ $(document).ready(function () {
              { "data": "idUsuario" ,"visible":false,"searchable":false},
              {
                  "data": "txtUrlFoto", render: function (data) {
-                    return `<img atyle="height:60px" src=${data} class="rounded mx-auto d-block"/ >`
+                    return `<img style="height:60px" src=${data} class="rounded mx-auto d-block"/ >`
                  }
              },
              { "data": "txtNombre" },

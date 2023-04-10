@@ -269,7 +269,7 @@ namespace Ronature.DAL.DBContext
                 entity.Property(e => e.TxtMarca)
                     .HasMaxLength(50)
                     .IsUnicode(false)
-                    .HasColumnName("Txt_marca");
+                    .HasColumnName("Txt_Marca");
 
                 entity.Property(e => e.TxtNombreImagen)
                     .HasMaxLength(100)

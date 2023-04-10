@@ -43,8 +43,14 @@ namespace Ronature.IOC
             Services.AddScoped<IUsuarioService, UsuarioService>();
             //Servicio de registro y modificación de Neogicio
             Services.AddScoped<INegocioService, NegocioService>();
-            //Servicio de registo y modificación de Categoría
+            //Servicio de registro y modificación de Categoría
             Services.AddScoped<ICategoriaService, CategoriaService>();
+            //Servicio de registro de Producto
+            Services.AddScoped<IProductoService, ProductoService>();
+            //Servicio de registro de TipoDocumento
+            Services.AddScoped<ITipoDocumentoVentaService, TipoDocumentoVentaService>();
+            //Servicio de registro de Ventas
+            Services.AddScoped<IVentaService, VentaService>();
         }
     }
 }
