@@ -72,7 +72,7 @@ namespace Ronature.AplicacionWeb.Controllers
                 {
                     string nombre_en_codigo = Guid.NewGuid().ToString("N");
                     string extension = Path.GetExtension(imagen.FileName);
-                    nombreImagen = string.Concat(nombreImagen, extension);
+                    nombreImagen = string.Concat(nombre_en_codigo, extension);
                     imagenStream = imagen.OpenReadStream();
                 }
 
@@ -116,7 +116,7 @@ namespace Ronature.AplicacionWeb.Controllers
                 {
                     string nombre_en_codigo = Guid.NewGuid().ToString("N");
                     string extension = Path.GetExtension(imagen.FileName);
-                    nombreImagen = string.Concat(nombreImagen, extension);
+                    nombreImagen = string.Concat(nombre_en_codigo, extension);
                     imagenStream = imagen.OpenReadStream();
                 }
 

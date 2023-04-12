@@ -64,6 +64,7 @@ namespace Ronature.BLL.Implementacion
         public async Task<List<Venta>> Historial(string numeroVenta, string fechaIni, string fechaFin)
         {
             IQueryable<Venta> query = await _repositorioVenta.Consultar();
+       
             fechaIni = fechaIni is null ? "" : fechaIni;
             fechaFin = fechaFin is null ? "" : fechaFin;
 
@@ -79,6 +80,8 @@ namespace Ronature.BLL.Implementacion
                     .Include(tdv => tdv.IdTipoDocumentoVentaNavigation)
                     .Include(u => u.IdUsuarioNavigation)
                     .Include(dv => dv.DetalleVenta)
+                    //.ThenInclude(p=>p.IdProductoNavigation)
+                    //.Select(pd=> new { txtDescripcionProducto = pd.DetalleVenta.Select(pd=>pd.txt)})
                     .ToList();
             }
             else

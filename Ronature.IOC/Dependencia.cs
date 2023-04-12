@@ -51,6 +51,8 @@ namespace Ronature.IOC
             Services.AddScoped<ITipoDocumentoVentaService, TipoDocumentoVentaService>();
             //Servicio de registro de Ventas
             Services.AddScoped<IVentaService, VentaService>();
+            //Servicio de DashBoard
+            Services.AddScoped<IDashBoardService, DashBoardService>();
         }
     }
 }

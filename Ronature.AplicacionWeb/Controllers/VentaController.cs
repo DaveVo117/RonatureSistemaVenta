@@ -7,6 +7,9 @@ using Ronature.BLL.Interfaces;
 using Ronature.Entity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
+using DinkToPdf;
+using DinkToPdf.Contracts;
+
 namespace Ronature.AplicacionWeb.Controllers
 {
     public class VentaController : Controller
@@ -16,11 +19,15 @@ namespace Ronature.AplicacionWeb.Controllers
         private readonly IVentaService _ventaService;
         private readonly IMapper _mapper;
 
-        public VentaController(ITipoDocumentoVentaService tipoDocumentoVentaService, IVentaService ventaService, IMapper mapper)//Constructor
+        private readonly IConverter _converter;
+
+        public VentaController(ITipoDocumentoVentaService tipoDocumentoVentaService, IVentaService ventaService, IMapper mapper, IConverter converter)//Constructor
         {
             _tipoDocumentoVentaService = tipoDocumentoVentaService;
             _ventaService = ventaService;
             _mapper = mapper;
+
+            _converter = converter;
         }
 
 
@@ -73,8 +80,8 @@ namespace Ronature.AplicacionWeb.Controllers
             {
                 modelo.IdUsuario = 1; // Se debe pasar el ID_Usuario que se ha logeado al sistema
 
-                Venta venta_credaa = await _ventaService.Registrar(_mapper.Map<Venta>(modelo));
-                modelo = _mapper.Map<VMVenta>(modelo);
+                Venta venta_creada = await _ventaService.Registrar(_mapper.Map<Venta>(modelo));
+                modelo = _mapper.Map<VMVenta>(venta_creada);
 
                 gResponse.Estado = true;
                 gResponse.Objeto = modelo;
@@ -105,6 +112,34 @@ namespace Ronature.AplicacionWeb.Controllers
 
 
 
+
+
+        public IActionResult MostrarPDFVenta(string numeroVenta)
+        {
+            string urlPLantillaVista = $"{this.Request.Scheme}://{this.Request.Host}/Plantilla/PDFVenta?numeroVenta={numeroVenta}";
+
+            var pdf = new HtmlToPdfDocument()
+            {
+                GlobalSettings = new GlobalSettings()
+                {
+                    PaperSize = PaperKind.A4,
+                    Orientation = Orientation.Portrait,
+                },
+                Objects =
+                {
+                    new ObjectSettings()
+                    {
+                        Page = urlPLantillaVista
+                    }
+                }
+            };
+
+
+            var archivoPDF = _converter.Convert(pdf);
+
+            return File(archivoPDF, "application/pdf");
+
+        }
 
     }
 }

@@ -18,5 +18,6 @@ namespace Ronature.Entity
         public DateTime? FechaRegistro { get; set; }
 
         public virtual Categoria? IdCategoriaNavigation { get; set; }
+        //public virtual ICollection<DetalleVenta> DetalleVenta { get; set; }
     }
 }
