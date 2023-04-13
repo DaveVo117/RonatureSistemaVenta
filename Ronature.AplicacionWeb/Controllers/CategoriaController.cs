@@ -7,9 +7,13 @@ using Ronature.AplicacionWeb.Utilidades.Response;
 using Ronature.BLL.Interfaces;
 using Ronature.Entity;
 using System.Runtime.CompilerServices;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ronature.AplicacionWeb.Controllers
 {
+    //Seguridad de Inicio de Sesion
+    [Authorize]
+
     public class CategoriaController : Controller
     {
         private readonly IMapper _mapper;

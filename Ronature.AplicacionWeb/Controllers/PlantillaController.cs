@@ -3,10 +3,11 @@
 using AutoMapper;
 using Ronature.AplicacionWeb.Models.ViewModels;
 using Ronature.BLL.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ronature.AplicacionWeb.Controllers
 {
-  public class PlantillaController : Controller
+    public class PlantillaController : Controller
   {
 /*ATRIBUTOS*/
         private readonly IMapper _mapper;

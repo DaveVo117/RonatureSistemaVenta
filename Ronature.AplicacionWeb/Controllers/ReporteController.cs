@@ -4,9 +4,13 @@ using AutoMapper;
 using Ronature.AplicacionWeb.Models.ViewModels;
 using Ronature.BLL.Interfaces;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ronature.AplicacionWeb.Controllers
 {
+    //Seguridad de Inicio de Sesion
+    [Authorize]
+
     public class ReporteController : Controller
     {
 /*ATRIBUTOS*/

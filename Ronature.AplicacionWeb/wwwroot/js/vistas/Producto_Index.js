@@ -1,4 +1,5 @@
-﻿const MODELO_BASE = {
+﻿
+const MODELO_BASE = {
     idProducto: 0,
     txtCodigoBarra: "",
     txtMarca: "",
@@ -114,7 +115,7 @@ function mostrarModal(modelo = MODELO_BASE) {
 
 
 $("#btnNuevo").click(function () {
-/*    debugger;*/
+    /*    debugger;*/
     mostrarModal()
 })
 

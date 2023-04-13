@@ -39,13 +39,14 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-//Coockies
+//Cookies
 app.UseAuthentication();
 
 app.UseAuthorization();
 
+//Ruta deInicio de Aplicación, se cambia de home/index a Acceso/Login
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Acceso}/{action=Login}/{id?}");
 
 app.Run();

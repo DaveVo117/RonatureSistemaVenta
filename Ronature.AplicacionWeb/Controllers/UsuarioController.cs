@@ -6,10 +6,12 @@ using Ronature.AplicacionWeb.Models.ViewModels;
 using Ronature.AplicacionWeb.Utilidades.Response;
 using Ronature.BLL.Interfaces;
 using Ronature.Entity;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ronature.AplicacionWeb.Controllers
 {
+    //Seguridad de Inicio de Sesion
+    [Authorize]
     public class UsuarioController : Controller
     {
         private readonly IUsuarioService _usuarioService;

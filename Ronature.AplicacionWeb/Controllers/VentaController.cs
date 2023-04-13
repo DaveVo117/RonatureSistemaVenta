@@ -9,9 +9,13 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 using DinkToPdf;
 using DinkToPdf.Contracts;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ronature.AplicacionWeb.Controllers
 {
+    //Seguridad de Inicio de Sesion
+    [Authorize]
+
     public class VentaController : Controller
     {
 /*ATRIBUTOS*/

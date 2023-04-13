@@ -10918,10 +10918,11 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://images.unsplash.com/photo-1541574823565-f1d660886187?w=600");
-  /* background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800"); */
-  background-position: center;
-  background-size: cover;
+    background: url("../img/Icons/CTE.png");
+    /*background: url("https://images.unsplash.com/photo-1541574823565-f1d660886187?w=600");*/
+    /* background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800"); */
+    background-position: center;
+    background-size: cover;
 }
 
 .bg-register-image {
@@ -10931,9 +10932,10 @@ a:focus {
 }
 
 .bg-password-image {
-  background: url("https://images.unsplash.com/photo-1541574823565-f1d660886187?w=600");
-  background-position: center;
-  background-size: cover;
+    background: url("../img/Icons/Pass.jpg");
+    /*background: url("https://images.unsplash.com/photo-1541574823565-f1d660886187?w=600");*/
+    background-position: center;
+    background-size: cover;
 }
 
 form.user .custom-checkbox.small label {

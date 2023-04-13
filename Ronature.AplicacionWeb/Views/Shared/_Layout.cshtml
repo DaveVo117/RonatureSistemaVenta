@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mi Tienda - @ViewData["Title"]</title>
+    <title>Expediente Digital C.T.E. - @ViewData["Title"]</title>
 
     <!-- Custom fonts for this template-->
     <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -56,7 +56,7 @@
                 <div id="collapseAdministracion" class="collapse" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="@Url.Action("Index","Usuario")">Usuarios</a>
-                        <a class="collapse-item" href="@Url.Action("Index","Negocio")">Negocio</a>
+                        <a class="collapse-item" href="@Url.Action("Index","Negocio")">Organismo</a>
                     </div>
                 </div>
             </li>
@@ -69,8 +69,8 @@
                 </a>
                 <div id="collapseInventario" class="collapse" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="@Url.Action("Index","Categoria")">Categorias</a>
-                        <a class="collapse-item" href="@Url.Action("Index","Producto")">Productos</a>
+                        <a class="collapse-item" href="@Url.Action("Index","Categoria")">Consulta SIEB</a>
+                        <a class="collapse-item" href="@Url.Action("Index","Producto")">Beneficiarios</a>
                     </div>
                 </div>
             </li>
@@ -83,8 +83,8 @@
                 </a>
                 <div id="collapseVenta" class="collapse" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="@Url.Action("NuevaVenta","Venta")">Nueva Venta</a>
-                        <a class="collapse-item" href="@Url.Action("HistorialVenta","Venta")">Historial Venta</a>
+                        <a class="collapse-item" href="@Url.Action("NuevaVenta","Venta")">Ficha Identificación</a>
+                        <a class="collapse-item" href="@Url.Action("HistorialVenta","Venta")">Historial Residencia</a>
                     </div>
                 </div>
             </li>
@@ -97,7 +97,7 @@
                 </a>
                 <div id="collapseReportes" class="collapse" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="@Url.Action("Index","Reporte")">Reporte de Ventas</a>
+                        <a class="collapse-item" href="@Url.Action("Index","Reporte")">Reportes</a>
                     </div>
                 </div>
             </li>
@@ -130,8 +130,14 @@
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
+
+                        @await Component.InvokeAsync("MenuUsuario")
+
+
+
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
+
+@*                        <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">David Vargas</span>
@@ -151,7 +157,8 @@
                                     Salir
                                 </a>
                             </div>
-                        </li>
+                        </li>*@
+
 
                     </ul>
 

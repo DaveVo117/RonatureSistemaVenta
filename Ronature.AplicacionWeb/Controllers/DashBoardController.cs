@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 using Ronature.AplicacionWeb.Models.ViewModels;
 using Ronature.AplicacionWeb.Utilidades.Response;
@@ -6,6 +7,9 @@ using Ronature.BLL.Interfaces;
 
 namespace Ronature.AplicacionWeb.Controllers
 {
+
+    //Seguridad de Inicio de Sesion
+    [Authorize]
     public class DashBoardController : Controller
     {
         /*ATRIBUTOS*/
