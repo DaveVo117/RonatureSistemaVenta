@@ -14,8 +14,9 @@
 
                 let d = responseJson.objeto
 
-               $("#totalVenta").text(d.totalVentas)
-                $("#totalIngresos").text(d.totalIngresos)
+                $("#totalVenta").text(d.totalVentas)
+                $("#totalIngresos").text(d.totalIngresos);
+                //$("#totalIngresos").text(d.totalIngresos)
                 $("#totalProductos").text(d.totalProductos)
                 $("#totalCategorias").text(d.totalCategorias)
 

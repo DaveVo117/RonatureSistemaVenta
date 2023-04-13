@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Ronature.AplicacionWeb.Models.ViewModels;
 using Ronature.AplicacionWeb.Utilidades.Response;
 using Ronature.BLL.Interfaces;
+using System.Globalization;
 
 namespace Ronature.AplicacionWeb.Controllers
 {
@@ -33,8 +34,10 @@ namespace Ronature.AplicacionWeb.Controllers
 
                 VMDashBoard vmDashBoard = new VMDashBoard();
 
+
+
                 vmDashBoard.TotalVentas = await _dashBoardService.TotalVentasUltimaSemana();
-                vmDashBoard.TotalIngresos = await _dashBoardService.TotalIngresosUltimaSemana();
+                vmDashBoard.TotalIngresos = string.Format("{0:C}", double.Parse(await _dashBoardService.TotalIngresosUltimaSemana()));
                 vmDashBoard.TotalProductos = await _dashBoardService.TotalProductos();
                 vmDashBoard.TotalCategorias = await _dashBoardService.TotalCategorias();
 
