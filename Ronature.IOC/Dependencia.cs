@@ -54,5 +54,6 @@ namespace Ronature.IOC
             //Servicio de DashBoard
             Services.AddScoped<IDashBoardService, DashBoardService>();
         }
+   
     }
 }
